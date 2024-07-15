@@ -1,1 +1,7 @@
-GPL v3?
+# Proprietary License for Learning Modules
+
+The learning modules contained within this repository are proprietary and not available for free public use. The content of these modules, including but not limited to text, images, and multimedia files, is protected by copyright. These modules may not be reproduced, distributed, or used for any purpose without explicit permission from the University of Michigan-Dearborn.
+
+Currently, access to these learning modules is restricted. Unauthorized access, distribution, or use of these materials is strictly prohibited. 
+
+These modules might be made available in the future.
