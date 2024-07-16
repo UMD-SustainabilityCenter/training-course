@@ -2,25 +2,41 @@
 
 ###  1. Fundamentals and Tools
 
-####  1.1. Machine Learning Linear Regression
+####  1.1. Simple Linear Regression
 
-- [Linear Regression](Modules/1.%20Fundamentals%20and%20Tools/1.1.%20Machine%20Learning%20Linear%20Regression/Linear%20Regression.ipynb) - no description
+- [Linear Regression](Modules/1.%20Fundamentals%20and%20Tools/1.1.%20Simple%20Linear%20Regression/Linear%20Regression.ipynb) - no description
 
-####  1.2. Machine Learning Classification
+####  1.2. Classification of categorical data
 
-- [Classification](Modules/1.%20Fundamentals%20and%20Tools/1.2.%20Machine%20Learning%20Classification/Classification.ipynb) - no description
+- [K-Nearest Neighbor](Modules/1.%20Fundamentals%20and%20Tools/1.2.%20Classification%20of%20categorical%20data/K-Nearest%20Neighbor.ipynb) - no description
 
-- [SVM](Modules/1.%20Fundamentals%20and%20Tools/1.2.%20Machine%20Learning%20Classification/SVM.ipynb) - no description
+- [Support Vector Machine](Modules/1.%20Fundamentals%20and%20Tools/1.2.%20Classification%20of%20categorical%20data/Support%20Vector%20Machine.ipynb) - no description
 
-- [XGBoost](Modules/1.%20Fundamentals%20and%20Tools/1.2.%20Machine%20Learning%20Classification/XGBoost.ipynb) - no description
+- [XGBoost](Modules/1.%20Fundamentals%20and%20Tools/1.2.%20Classification%20of%20categorical%20data/XGBoost.ipynb) - no description
 
-- [k-NN](Modules/1.%20Fundamentals%20and%20Tools/1.2.%20Machine%20Learning%20Classification/k-NN.ipynb) - no description
+####  1.3. Time-series Forecasting
+
+- [ARIMA](Modules/1.%20Fundamentals%20and%20Tools/1.3.%20Time-series%20Forecasting/ARIMA.ipynb) - This module
+
+- [Exponential Smoothing](Modules/1.%20Fundamentals%20and%20Tools/1.3.%20Time-series%20Forecasting/Exponential%20Smoothing.ipynb) - This module
+
+- [Gradient Boost Regressor](Modules/1.%20Fundamentals%20and%20Tools/1.3.%20Time-series%20Forecasting/Gradient%20Boost%20Regressor.ipynb) - This module
+
+- [Linear Regression](Modules/1.%20Fundamentals%20and%20Tools/1.3.%20Time-series%20Forecasting/Linear%20Regression.ipynb) - This module
+
+- [MLP Regressor](Modules/1.%20Fundamentals%20and%20Tools/1.3.%20Time-series%20Forecasting/MLP%20Regressor.ipynb) - This module
+
+- [Random Forest Regression](Modules/1.%20Fundamentals%20and%20Tools/1.3.%20Time-series%20Forecasting/Random%20Forest%20Regression.ipynb) - This module
+
+####  1.4. Image Classification
+
+- [Image Classification](Modules/1.%20Fundamentals%20and%20Tools/1.4.%20Image%20Classification/Image%20Classification.ipynb) - no description
 
 ###  2. Learning Modules
 
 ####  2.1. 3D Printing Image Processing
 
-- [module](Modules/2.%20Learning%20Modules/2.1.%203D%20Printing%20Image%20Processing/module.ipynb) - no description
+- [Image Processing](Modules/2.%20Learning%20Modules/2.1.%203D%20Printing%20Image%20Processing/Image%20Processing.ipynb) - no description
 
 ####  2.2. Bead Extraction and Prediction
 
@@ -61,6 +77,10 @@
 ####  2.8. Digital Twin for Smart Scanning
 
 - [Digital Twin for Smart Scanning](Modules/2.%20Learning%20Modules/2.8.%20Digital%20Twin%20for%20Smart%20Scanning/Digital%20Twin%20for%20Smart%20Scanning.ipynb) - no description
+
+####  2.9. Predictive Maintenance Module
+
+- [Predictive Maintenance Module](Modules/2.%20Learning%20Modules/2.9.%20Predictive%20Maintenance%20Module/Predictive%20Maintenance%20Module.ipynb) - no description
 
 ###  3. Advanced Topics
 

@@ -1,0 +1,1 @@
+This module serves as a guide for forecasting time series data with simple linear regression.
