@@ -1,0 +1,13 @@
+conda create tf_env python==3.6
+conda activate tf_env
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+# Anything above 2.10 is not supported on the GPU on Windows Native
+python -m pip install "tensorflow<2.11"
+# Verify the installation:
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+pip install numpy==1.19.2
+pip install pandas
+pip install matplotlib
+conda install -c anaconda ipykernel
+python -m ipykernel install --user --name=tf_environment
+jupyter-notebook
