@@ -50,9 +50,17 @@
 
 - [3D Scan Feature Extraction](Modules/2.%20Learning%20Modules/2.5.%20Height%20Map%20Feature%20Extraction/3D%20Scan%20Feature%20Extraction.ipynb) - no description
 
-####  2.6 Model Predictive Control
+####  2.6. Model Predictive Control
 
-- [Model Predictive Control](Modules/2.%20Learning%20Modules/2.6%20Model%20Predictive%20Control/Model%20Predictive%20Control.ipynb) - no description
+- [Model Predictive Control](Modules/2.%20Learning%20Modules/2.6.%20Model%20Predictive%20Control/Model%20Predictive%20Control.ipynb) - no description
+
+####  2.7. Digital Twin Lithium-Ion Battery
+
+- [Digital Twin Lithium-Ion](Modules/2.%20Learning%20Modules/2.7.%20Digital%20Twin%20Lithium-Ion%20Battery/Digital%20Twin%20Lithium-Ion.ipynb) - no description
+
+####  2.8. Digital Twin for Smart Scanning
+
+- [Digital Twin for Smart Scanning](Modules/2.%20Learning%20Modules/2.8.%20Digital%20Twin%20for%20Smart%20Scanning/Digital%20Twin%20for%20Smart%20Scanning.ipynb) - no description
 
 ###  3. Advanced Topics
 
@@ -72,6 +80,12 @@
 
 - [CNN_data_to_image_twosensor_fusion_feature](Modules/3.%20Advanced%20Topics/3.3.%20Sensor%20Fusion%20Processing/code/CNN_data_to_image_twosensor_fusion_feature.ipynb) - no description
 
+- [cnn_training](Modules/3.%20Advanced%20Topics/3.3.%20Sensor%20Fusion%20Processing/code/cnn_training.ipynb) - no description
+
 - [mcp_data_preprocessing](Modules/3.%20Advanced%20Topics/3.3.%20Sensor%20Fusion%20Processing/code/mcp_data_preprocessing.ipynb) - no description
 
+- [microphone_preprocess](Modules/3.%20Advanced%20Topics/3.3.%20Sensor%20Fusion%20Processing/code/microphone_preprocess.ipynb) - no description
+
 - [phd_data_preprocessing](Modules/3.%20Advanced%20Topics/3.3.%20Sensor%20Fusion%20Processing/code/phd_data_preprocessing.ipynb) - no description
+
+- [photodiode_preprocess](Modules/3.%20Advanced%20Topics/3.3.%20Sensor%20Fusion%20Processing/code/photodiode_preprocess.ipynb) - no description
