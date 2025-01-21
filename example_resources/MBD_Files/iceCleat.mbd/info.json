@@ -1,0 +1,39 @@
+{
+    "general_properties": {
+        "name": "M1 Abrams Ice Cleat",
+        "manufacturer": "Casting INC",
+        "parent_device": "M1 Abrams Tank",
+        "install_location": "Tread",
+        "install_method": "M10 Bolt @ 200 N/m",
+        "price": "10",
+        "shipping_tiem": "10 days",
+        "applications": [
+            "military",
+            "testing",
+            "science"
+        ],
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "thumb.jpeg"
+    },
+
+    "physical_properties": {
+        "mass": "2100.262",
+        "mass_unit": "g",
+        "volume": "2.675E+05",
+        "volume_unit": "mm^3",
+        "material": "Iron - Cast",
+        "hardness": "300",
+        "hardness_unit": "HB",
+        "resonant_frequency": "40 kHz"
+    },
+
+    "manufacturing_properties": {
+        "method": "Gravity sand casting",
+        "lead_time": "2 weeks",
+        "max_production": "10 per day",
+        "waste_percent": "10 %",
+        "scrap_rate": "5 %",
+        "carbon_footprint": "10",
+        "carbon_footprint_unit": "g(CO2)"
+    }
+}

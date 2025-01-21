@@ -1,0 +1,40 @@
+{
+    "general_properties": {
+        "name": "M Block",
+        "manufacturer": "3D Printing INC",
+        "parent_device": "N/A",
+        "install_location": "N/A",
+        "install_method": "N/A",
+        "price": "5",
+        "shipping_tiem": "10 days",
+        "applications": [
+            "display",
+            "information",
+            "science",
+            "education"
+        ],
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "thumb.jpeg"
+    },
+
+    "physical_properties": {
+        "mass": "50",
+        "mass_unit": "g",
+        "volume": "95906.417",
+        "volume_unit": "mm^3",
+        "material": "PLA",
+        "hardness": "50",
+        "hardness_unit": "HB",
+        "resonant_frequency": "20 kHz"
+    },
+
+    "manufacturing_properties": {
+        "method": "FFF 3D Printing",
+        "lead_time": "2 weeks",
+        "max_production": "10 per day",
+        "waste_percent": "2 %",
+        "scrap_rate": "10 %",
+        "carbon_footprint": "5",
+        "carbon_footprint_unit": "g(CO2)"
+    }
+}
