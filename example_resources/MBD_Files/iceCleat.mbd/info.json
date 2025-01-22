@@ -1,6 +1,7 @@
 {
     "general_properties": {
         "name": "M1 Abrams Ice Cleat",
+        "part_id": "M5437",
         "manufacturer": "Casting INC",
         "parent_device": "M1 Abrams Tank",
         "install_location": "Tread",
