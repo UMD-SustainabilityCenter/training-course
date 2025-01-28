@@ -1,0 +1,40 @@
+{
+    "general_properties": {
+        "name": "M1 Abrams Ice Cleat",
+        "part_id": "M5437",
+        "manufacturer": "Casting INC",
+        "parent_device": "M1 Abrams Tank",
+        "install_location": "Tread",
+        "install_method": "M10 Bolt @ 200 N/m",
+        "price": "10",
+        "shipping_tiem": "10 days",
+        "applications": [
+            "military",
+            "testing",
+            "science"
+        ],
+        "description": "The M1 Abrams Ice Cleat is a durable and robust component designed for use on the treads of the M1 Abrams Tank. Manufactured from cast iron using gravity sand casting, this high-strength part (300 HB hardness) ensures reliable traction and performance in icy conditions. With applications in military, scientific, and testing environments, the cleat is installed using an M10 bolt tightened to 200 N·m. It is a sturdy solution tailored for demanding environments with a carbon footprint of just 10g CO₂ per unit.",
+        "image": "thumb.jpeg"
+    },
+
+    "physical_properties": {
+        "mass": "2100.262",
+        "mass_unit": "g",
+        "volume": "2.675E+05",
+        "volume_unit": "mm^3",
+        "material": "Iron - Cast",
+        "hardness": "300",
+        "hardness_unit": "HB",
+        "resonant_frequency": "40 kHz"
+    },
+
+    "manufacturing_properties": {
+        "method": "Gravity sand casting",
+        "lead_time": "2 weeks",
+        "max_production": "10 per day",
+        "waste_percent": "10 %",
+        "scrap_rate": "5 %",
+        "carbon_footprint": "10",
+        "carbon_footprint_unit": "g(CO2)"
+    }
+}

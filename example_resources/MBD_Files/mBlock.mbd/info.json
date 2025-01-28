@@ -1,0 +1,41 @@
+{
+    "general_properties": {
+        "name": "M Block",
+        "part_id": "P5729J564",
+        "manufacturer": "3D Printing INC",
+        "parent_device": "N/A",
+        "install_location": "N/A",
+        "install_method": "N/A",
+        "price": "5",
+        "shipping_tiem": "10 days",
+        "applications": [
+            "display",
+            "information",
+            "science",
+            "education"
+        ],
+        "description": "The M Block is a compact and versatile 3D-printed part designed for educational, scientific, and display purposes. Manufactured from durable PLA material using FFF 3D printing, this lightweight component (50g) features a unique design optimized for both functionality and visual appeal. Suitable for a range of applications, it is an affordable and eco-conscious option with a low carbon footprint of 5g CO₂ per part.",
+        "image": "thumb.jpeg"
+    },
+
+    "physical_properties": {
+        "mass": "50",
+        "mass_unit": "g",
+        "volume": "95906.417",
+        "volume_unit": "mm^3",
+        "material": "PLA",
+        "hardness": "50",
+        "hardness_unit": "HB",
+        "resonant_frequency": "20 kHz"
+    },
+
+    "manufacturing_properties": {
+        "method": "FFF 3D Printing",
+        "lead_time": "2 weeks",
+        "max_production": "10 per day",
+        "waste_percent": "2 %",
+        "scrap_rate": "10 %",
+        "carbon_footprint": "5",
+        "carbon_footprint_unit": "g(CO2)"
+    }
+}
