@@ -1,6 +1,9 @@
 # Apple filesystem
 .DS_Store
 
+# Visual Studio Code Files
+*.code-workspace
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
