@@ -98,6 +98,6 @@ def example1():
 
     # Widget to control the noise level with adjusted layout
     interact(plot_with_noise, 
-             noise_level=FloatSlider(value=0.1, min=0.0, max=1.0, step=0.1, description='Noise Level', style={'description_width': 'initial'}))
+             noise_level=FloatSlider(value=0.1, min=0.0, max=0.3, step=0.05, description='Noise Level', style={'description_width': 'initial'}))
 
 # To run the example, simply call example1()
