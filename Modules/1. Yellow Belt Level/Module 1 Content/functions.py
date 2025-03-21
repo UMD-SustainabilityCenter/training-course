@@ -68,36 +68,57 @@ def quiz1():
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
-from ipywidgets import interact, FloatSlider
+from ipywidgets import interact, FloatSlider, Output
+from IPython.display import display, HTML
 
 def example1():
     # Set default font to Times New Roman, size 12
-    rcParams['font.family'] = 'serif'
-    rcParams['font.serif'] = 'Times New Roman'
     rcParams['font.size'] = 12
-    # Generate some clean data
-    np.random.seed(0)
-    x = np.linspace(0, 10, 50)
-    y = np.sin(x)
 
-    def plot_with_noise(noise_level=0.1):
-        # Add noise
-        noisy_y = y + np.random.normal(0, noise_level, size=y.shape)
-        
-        # Plotting
-        plt.figure(figsize=(5, 3))
-        plt.scatter(x, y, label='Data', color='blue', s=3)  # Original clean sine data
-        plt.scatter(x, noisy_y, color='blue', label='Noisy Data', s=3, alpha=1)  # Noisy data
-        plt.title('Effect of Noise on Data')
-        plt.xlabel('X')
-        plt.ylabel('Y')
-        # plt.legend(loc='upper left')
+    # Simulated vibration sensor data (in g-force)
+    np.random.seed(0)
+    time = np.linspace(0, 10, 500)  # 10 seconds of data
+    base_vibration = np.sin(2 * np.pi * 2 * time)  # 2Hz vibration (normal machine operation)
+
+    # Output widget for real-time conclusions
+    output_text = Output()
+
+    def analyze_vibration(noise_level=0.1):
+        """Simulates vibration data with noise and evaluates its usability."""
+        noise = np.random.normal(0, noise_level, size=base_vibration.shape)  # Add random noise
+        measured_vibration = base_vibration + noise
+
+        # Plot vibration data
+        plt.figure(figsize=(6, 3))
+        plt.plot(time, base_vibration, label="True Vibration", color="blue", alpha=0.6)
+        plt.plot(time, measured_vibration, label="Measured Data", color="red", alpha=0.7)
+        plt.xlabel("Time (s)")
+        plt.ylabel("Vibration (g)")
+        plt.title("Vibration Sensor Data with Noise")
+        plt.legend()
         plt.grid(True)
-        plt.ylim(-3, 3)
+        plt.xlim(0, 2)  # Show only first 2 seconds for clarity
         plt.show()
 
-    # Widget to control the noise level with adjusted layout
-    interact(plot_with_noise, 
-             noise_level=FloatSlider(value=0.1, min=0.0, max=0.3, step=0.05, description='Noise Level', style={'description_width': 'initial'}))
+        # Evaluate the data quality based on noise level
+        with output_text:
+            output_text.clear_output()
+            if noise_level < 0.05:
+                message = "✅ <b>Data is clean:</b> Vibration readings are accurate and reliable."
+            elif noise_level < 0.15:
+                message = "⚠️ <b>Some noise present:</b> Still usable, but minor distortions may affect precision."
+            elif noise_level < 0.25:
+                message = "⚠️ <b>Significant noise:</b> Possible difficulty in detecting real anomalies."
+            else:
+                message = "❌ <b>Data unreliable:</b> Noise overwhelms the actual signal, making diagnosis impossible!"
+
+            display(HTML(f"<p style='font-size:18px; color:black;'>{message}</p>"))
+
+    # Interactive noise slider
+    noise_slider = FloatSlider(value=0.0, min=0.0, max=0.3, step=0.05, description="Noise Level")
+
+    # Display interactive plot and output text
+    interact(analyze_vibration, noise_level=noise_slider)
+    display(output_text)
 
 # To run the example, simply call example1()
