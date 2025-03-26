@@ -6,9 +6,11 @@ from urllib.parse import quote
 TOC_TAG = "auto-generated-toc"
 
 def find_notebooks(base_dir="."):
-    """Recursively find all Jupyter notebooks in the given directory."""
+    """Recursively find all Jupyter notebooks in the given directory, ignoring .ipynb_checkpoints."""
     notebooks = []
     for root, _, files in os.walk(base_dir):
+        if ".ipynb_checkpoints" in root:
+            continue  # Skip .ipynb_checkpoints directories
         for file in files:
             if file.endswith(".ipynb"):
                 notebooks.append(os.path.join(root, file))
@@ -24,13 +26,6 @@ def save_notebook(notebook_data, notebook_path):
     with open(notebook_path, 'w', encoding='utf-8') as f:
         json.dump(notebook_data, f, indent=1, ensure_ascii=False)
         f.write("\n")  # Ensure there's a newline at the end
-
-def remove_existing_toc(notebook_data):
-    """Remove existing ToC cells identified by the TOC_TAG."""
-    notebook_data['cells'] = [
-        cell for cell in notebook_data['cells']
-        if TOC_TAG not in cell.get('metadata', {}).get('tags', [])
-    ]
 
 def generate_toc(notebook_data):
     """Generate a Table of Contents from the notebook's markdown headings."""
@@ -52,22 +47,39 @@ def generate_toc(notebook_data):
     toc_lines.append("- [🏠 Home](../../welcomePage.ipynb)")
     return "\n".join(toc_lines)
 
-def insert_toc(notebook_data, toc):
-    """Insert the generated ToC at the beginning of the notebook."""
+def insert_or_update_toc(notebook_data, toc):
+    """Insert the generated ToC at the beginning of the notebook or update existing ToC."""
     toc_cell = {
         "cell_type": "markdown",
         "metadata": {"tags": [TOC_TAG]},
         "source": [toc],
     }
+
+    # Check if a ToC cell already exists
+    for i, cell in enumerate(notebook_data['cells']):
+        if TOC_TAG in cell.get('metadata', {}).get('tags', []):
+            # Update the existing ToC cell
+            notebook_data['cells'][i] = toc_cell
+            print("ToC already exists, updating in place")
+            return
+
+    # If no ToC cell exists, insert at the beginning
     notebook_data['cells'].insert(0, toc_cell)
+    print("ToC does not exist, inserting at the top")
+
+def remove_existing_toc(notebook_data):
+    """Remove existing ToC cells identified by the TOC_TAG."""
+    notebook_data['cells'] = [
+        cell for cell in notebook_data['cells']
+        if TOC_TAG not in cell.get('metadata', {}).get('tags', [])
+    ]
 
 def process_notebook(notebook_path):
-    """Process a single notebook: remove existing ToC, generate a new one, and insert it."""
+    """Process a single notebook: generate a new ToC and insert or update it."""
     try:
         notebook_data = load_notebook(notebook_path)
-        remove_existing_toc(notebook_data)
         toc = generate_toc(notebook_data)
-        insert_toc(notebook_data, toc)
+        insert_or_update_toc(notebook_data, toc)  # Use the new function
         save_notebook(notebook_data, notebook_path)
         print(f"✅ Updated ToC in: {notebook_path}")
     except Exception as e:
